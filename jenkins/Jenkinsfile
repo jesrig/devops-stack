@@ -1,0 +1,16 @@
+pipeline {
+
+  agent any
+
+  stages {
+    stage('buildAndPushImage') {
+      sh '''
+        git pull https://github.com/jesrig/devops-stack.git
+        docker build -t jesrig/devops-stack:latest .
+        docker push jesrig/devops-stack:latest
+       
+      '''
+    }
+
+  }
+}

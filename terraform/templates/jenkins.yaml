@@ -1,0 +1,9 @@
+controller:
+  sidecars:
+    configAutoReload:
+      enabled: true
+rbac:
+  create: true
+
+additionalPlugins:
+  - dockerhub:latest
