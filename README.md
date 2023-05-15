@@ -14,3 +14,4 @@ installs Apache Pulsar (which by defaults comes with the kube-prometheus-stack).
 
 1. Start up your minikube cluster: `minikube start`
 2. Install the helm charts: `cd terraform && terraform init && terraform apply`
+3. Apply the helm charts: `kubectl apply -f k8s/`

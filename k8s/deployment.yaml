@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-stack-deployment
+  labels:
+    app: devops-stack
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-stack
+  template:
+    metadata:
+      labels:
+        app: devops-stack
+    spec:
+      containers:
+      - name: hello-devops
+        image: jesrig/devops-stack:1.0
+        ports:
+          - name: http
+            containerPort: 80
+            protocol: TCP
